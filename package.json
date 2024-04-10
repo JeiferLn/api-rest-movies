@@ -1,0 +1,19 @@
+{
+  "name": "api-rest-movies",
+  "version": "1.0.0",
+  "description": "Sitio web de peliculas usando API REST de The Movie DB",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeiferLn/api-rest-movies.git"
+  },
+  "author": "@jeiferln",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JeiferLn/api-rest-movies/issues"
+  },
+  "homepage": "https://github.com/JeiferLn/api-rest-movies#readme"
+}
