@@ -7,8 +7,118 @@
   <link rel="stylesheet" href="./styles/app.css">
 </head>
 <body>
-  <h1>MY MOVIES DB</h1>
+  <header class="header-container">
+    <nav class="mobile">
+      <div class="header-main-container--mobile">
+        <div>
+          <img src="./assets/header-svg/list.svg" alt="list-button" class="first-svg-header">
+        </div>
+          <h1>MY MOVIES DB</h1>
+        <div>
+          <img onclick="toggleSearch()" src="./assets/header-svg/search.svg" alt="search-button" class="second-svg-header">
+        </div>
+      </div>
+      <div id="searchContainer" class="inactive">
+        <form class="form-container">
+          <input type="text" name="search" id="search" class="input-header">
+          <button>
+            <img src="./assets/header-svg/arrow-right.svg" alt="button">
+          </button>
+        </form>
+      </div>
+    </nav>
 
+    <nav class="desktop">
+      <div class="header-main-container--desktop">
+        <div class="header-title">
+          <h1>MY MOVIES DB</h1>
+        </div>
+        <div class="header-categories">
+          <ul id="navList">
+            <li onclick="navSelected(this)">Home</li>
+            <li onclick="navSelected(this)">Trending</li>
+            <li onclick="navSelected(this)">Categories</li>
+            <li onclick="navSelected(this)">Popular</li>
+            <li onclick="navSelected(this)">Upcoming</li>
+          </ul>
+        </div>
+        <div class="header-search">
+          <form>
+            <input type="text" name="search" id="search">
+            <button>
+              <img src="./assets/header-svg/search.svg" alt="search-icon">
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    
+    <section class="preview-container">
+      <div id="previewImg" class="preview-img">
+        <div class="preview-content">
+          <div class="preview-information">
+            <div>
+              <img src="./assets/main-preview/star-fill.svg" alt="star-rating">
+              <p id="numRating"></p>
+            </div>
+            <div>
+              <p>TRENDING</p>
+            </div>
+          </div>
+          <div class="preview-title-container">
+            <p id="previewTitle"></p>
+            <p id="previewDescription" class="desktop preview-description"></p>
+          </div>
+          <div class="preview-buttons">
+            <button>
+              <img src="./assets/main-preview/play-fill.svg" alt="play-icon">
+              <p>PLAY TRAILER</p>
+            </button>
+            <button>
+              <img src="./assets/main-preview/info-circle-fill.svg" alt="info-icon">
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sections-header">
+        <h1>Trending</h1>
+        <p>SEE ALL</p>
+      </div>
+      <div id="trendingContent" class="all-movies"></div>
+    </section>
+
+    <section>
+      <h1 class="category-title">Categories</h1>
+      <div id="categoriesContent" class="categories-content"></div>
+    </section>
+
+    <section>
+      <div class="sections-header">
+        <h1>Popular</h1>
+        <p>SEE ALL</p>
+      </div>
+      <div id="popularContent" class="all-movies"></div>
+    </section>
+
+    <section class="upcoming-container">
+      <div class="sections-header">
+        <h1>Upcoming</h1>
+        <p>SEE ALL</p>
+      </div>
+      <div id="upcomingContent" class="all-movies"></div>
+    </section>
+
+  </main>
+  <footer class="footer-container">
+    <p>© All rights reserved | JeiferLn</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="./src/secrect.js"></script>
   <script src="./src/main.js"></script>
 </body>
