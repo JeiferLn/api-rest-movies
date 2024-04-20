@@ -1,3 +1,14 @@
+const api = axios.create({
+  baseURL: API_URL,
+  headers: {
+    'Content-Type': 'application/json;charset=utf-8',
+    'accept': 'application/json'
+  },
+  params: {
+    'api_key': API_KEY
+  }
+});
+
 let isSearchActive = false;
 
 function toggleSearch(){
